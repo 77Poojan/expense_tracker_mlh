@@ -24,4 +24,4 @@ The API is available at `http://127.0.0.1:8000`; interactive documentation is at
 - `DELETE /expenses/{id}` — delete an expense
 
 Expense fields are `description`, positive `amount`, `category`, and optional
-`date` (defaults to today, formatted as `YYYY-MM-DD`).~~
+`date` (defaults to today, formatted as `YYYY-MM-DD`).
