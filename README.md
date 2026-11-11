@@ -11,8 +11,10 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-The API is available at `http://127.0.0.1:8000`; interactive documentation is at
-`http://127.0.0.1:8000/docs`. Data is stored in `expenses.db` by default. Set
+The dashboard is available at `http://127.0.0.1:8000`; interactive API
+documentation is at `http://127.0.0.1:8000/docs`. Enter the configured API key
+in the dashboard to load your expenses. The key stays in page memory and is not
+stored in the browser. Data is stored in `expenses.db` by default. Set
 `EXPENSES_DB` to use a different SQLite file.
 
 ## Endpoints

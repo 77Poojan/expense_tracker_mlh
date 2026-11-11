@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Iterator
 
 from fastapi import Depends, FastAPI, HTTPException, Response, status
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 
@@ -60,8 +61,8 @@ app = FastAPI(title="Expense Tracker API", lifespan=lifespan)
 
 
 @app.get("/")
-def root() -> dict[str, str]:
-    return {"message": "Expense Tracker API", "docs": "/docs"}
+def root() -> FileResponse:
+    return FileResponse(Path(__file__).parent / "static" / "index.html")
 
 
 @app.post(
